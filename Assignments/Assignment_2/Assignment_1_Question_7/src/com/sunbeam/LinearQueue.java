@@ -29,8 +29,7 @@ public class LinearQueue {
 	public void pop()
 	{
 		 int item = arr[front];
-         arr[front] = 0; 
-         front = (front + 1) % size;
+         front++;
          System.out.println("Element delete: " +item);
 	}
 	//peek element in queue
