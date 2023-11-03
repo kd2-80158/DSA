@@ -12,8 +12,8 @@ public class MainClass {
 		list.addPosition(40, 4);
 		
 //		slist.deletePosition(3);
-		list.deletePosition(3);
-//		list.deletePosition(4);
+//		list.deletePosition(3);
+		list.deletePosition(5);
 		
 		list.display();
 		

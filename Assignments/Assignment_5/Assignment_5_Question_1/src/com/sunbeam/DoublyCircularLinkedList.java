@@ -55,7 +55,6 @@ public int addPosition(int value,int pos)
 		trav.prev.next=newnode;
 		trav.prev=newnode;
 		count++;
-		System.out.println("count: "+count);
 	}
 	return count;
 }
@@ -67,23 +66,23 @@ public void deletePosition(int pos)
 	}
 	else if(pos>count || pos<1)
 	{
-		return;
+		System.out.println("Invalid position");
 	}
 	else if(pos==count)
 	{
 		Node trav = head;
-		for(int i=1;i<pos-1;i++)
+		for(int i=1;i<pos;i++)
 		{
 			trav=trav.next;
 		}
-		trav.next=trav.prev;
-		trav.prev.prev=trav;
+		trav.prev.next=trav.next;
+		trav.next.prev=trav.prev;
 		
 	}
 	else
 	{
 		Node trav = head;
-		for(int i=1;i<pos-1;i++)
+		for(int i=1;i<pos;i++)
 		{
 			trav=trav.next;
 		}
